@@ -19,7 +19,7 @@ This project is designed to demonstrate SQL skills and techniques typically used
 
 ### 1. Database Setup
 
-- **Database Creation**: The project starts by creating a database named `p1_retail_db`.
+- **Database Creation**: The project starts by creating a database named `sql_retailsales_p1`.
 - **Table Creation**: A table named `retail_sales` is created to store the sales data. The table structure includes columns for transaction ID, sale date, sale time, customer ID, gender, age, product category, quantity sold, price per unit, cost of goods sold (COGS), and total sale amount.
 
 ```sql
@@ -46,8 +46,9 @@ CREATE TABLE retail_sales
 - **Record Count**: Determine the total number of records in the dataset.
 - **Customer Count**: Find out how many unique customers are in the dataset.
 - **Category Count**: Identify all unique product categories in the dataset.
+- **Update Date**: Update for any age column and replace records with missing data.
 - **Null Value Check**: Check for any null values in the dataset and delete records with missing data.
-
+  
 ```sql
 SELECT COUNT(*) FROM retail_sales;
 SELECT COUNT(DISTINCT customer_id) FROM retail_sales;
@@ -108,10 +109,11 @@ FROM retail_sales
 WHERE category = 'Beauty'
 ```
 
-5. **Write a SQL query to find all transactions where the total_sale is greater than 1000.**:
+5. **Write a SQL query to find all transactions where the total_sale is greater than 1000 by descending.**:
 ```sql
 SELECT * FROM retail_sales
 WHERE total_sale > 1000
+ORDER BY total_sale DESC;
 ```
 
 6. **Write a SQL query to find the total number of transactions (transaction_id) made by each gender in each category.**:
@@ -219,6 +221,6 @@ This project is part of my portfolio, showcasing the SQL skills essential for da
 
 For more content on SQL, data analysis, and other data-related topics, make sure to follow me on social media and join our community:
 
-- **LinkedIn**: [Connect with me professionally](https://www.linkedin.com/in/ismailfarhang01)
+- **LinkedIn**: [Connect with me professionally](https://www.linkedin.com/in/ismailfarhang01/)
 
 Thank you for your support, and I look forward to connecting with you!
